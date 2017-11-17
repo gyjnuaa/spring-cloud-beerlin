@@ -1,0 +1,17 @@
+#zeus:
+#  name: commons datasource configs for develop
+#  version: 1.0
+
+
+#mysql配置
+spring:
+  data:
+    mysql:
+      database: js
+      host: 106.14.169.76
+      port: 3306
+
+#仅输出ERROR日志
+#logging:
+#  level:
+#    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: ERROR
