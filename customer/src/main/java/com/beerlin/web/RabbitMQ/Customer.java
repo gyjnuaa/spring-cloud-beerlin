@@ -1,4 +1,4 @@
-package com.example.demo.RabbitMQ;
+package com.beerlin.web.RabbitMQ;
 
 import com.rabbitmq.client.*;
 
@@ -15,7 +15,7 @@ public class Customer {
         // 创建连接工厂
         ConnectionFactory factory = new ConnectionFactory();
         //设置RabbitMQ地址
-        factory.setHost("localhost");
+        factory.setHost("106.14.169.76");
         //创建一个新的连接
         Connection connection = factory.newConnection();
         //创建一个通道

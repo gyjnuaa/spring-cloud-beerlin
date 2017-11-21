@@ -1,4 +1,4 @@
-package com.example.demo.ZipkinDemo;
+package com.beerlin.web.ZipkinDemo;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

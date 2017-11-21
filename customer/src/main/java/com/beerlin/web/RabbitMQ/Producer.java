@@ -1,4 +1,4 @@
-package com.example.demo.RabbitMQ;
+package com.beerlin.web.RabbitMQ;
 
 /**
  * Created by GYJ on 2017-11-17.
@@ -7,6 +7,9 @@ package com.example.demo.RabbitMQ;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -14,14 +17,17 @@ import java.util.concurrent.TimeoutException;
 /**
  * 消息生成者
  */
+@RestController
+@RequestMapping("/Producer")
 public class Producer {
     public final static String QUEUE_NAME="rabbitMQ.test";
 
-    public static void main(String[] args) throws IOException, TimeoutException {
+    @RequestMapping(value = "/send",method = RequestMethod.GET)
+    public  void send() throws IOException, TimeoutException {
         //创建连接工厂
         ConnectionFactory factory = new ConnectionFactory();
         //设置RabbitMQ相关信息
-        factory.setHost("localhost");
+        factory.setHost("106.14.169.76");
         //factory.setUsername("lp");
         //factory.setPassword("");
         // factory.setPort(2088);
